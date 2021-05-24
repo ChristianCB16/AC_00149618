@@ -5,13 +5,13 @@ org     100h
     ; Carnet 00149518 
     ; sumatoria = 29 (1D) promedio = 3.625 (A3)  
     mov     byte [200h], 0
-    mov     byte [201h], 0
-    mov     byte [202h], 1
-    mov     byte [203h], 4
-    mov     byte [204h], 9
-    mov     byte [205h], 6
-    mov     byte [206h], 1
-    mov     byte [207h], 8
+    mov     byte [210h], 0
+    mov     byte [220h], 1
+    mov     byte [230h], 4
+    mov     byte [240h], 9
+    mov     byte [250h], 6
+    mov     byte [260h], 1
+    mov     byte [270h], 8
 
     XOR SI, SI 
     XOR DI, DI 
@@ -23,8 +23,7 @@ org     100h
     call promedio
 
 iteracion_sumatoria:
-    ADD BX, [200h+SI]
-    INC SI 
+    ADD BX, [200h+10d]
     LOOP iteracion_sumatoria 
     ret
 
