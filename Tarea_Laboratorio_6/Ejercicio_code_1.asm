@@ -8,8 +8,8 @@
         msg1	DB	'Ingresa la contrasena: ', '$'
         frase 	times 	20  	db	' '
         msg2 	DB 	'BIENVENIDO SIUU', '$'
-        msg3    DB      'La contrasena is incorrecta', '$'
-        msg4    DB      'Arqui01'
+        msg3    DB      'INCORRECTO :(', '$'
+        msg4    DB      'Arqu1'
          
         section .text
         
@@ -21,7 +21,7 @@
 ComprobandoContra:
         xor     DI, DI
 LOOP:
-        cmp     DI, 7d
+        cmp     DI, 5d
         je      MensajeBienvenido
         mov     BL, [msg4 + DI]
         cmp     BL, byte[300h + DI]
